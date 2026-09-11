@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Churn Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Customer Churn Prediction</h1>
+            <p>Predict whether a telecom customer is likely to churn.</p>
+        </header>
+
+
+        <form id="churnForm">
+
+            <!-- Customer Information -->
+            <section class="card">
+
+                <h2>Customer Information</h2>
+
+                <div class="grid">
+
+                    <div class="field">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="SeniorCitizen">Senior Citizen</label>
+                        <select id="SeniorCitizen" required>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="Partner">Partner</label>
+                        <select id="Partner" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="Dependents">Dependents</label>
+                        <select id="Dependents" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Services -->
+            <section class="card">
+
+                <h2>Services</h2>
+
+                <div class="grid">
+
+                    <div class="field">
+                        <label for="tenure">Tenure (months)</label>
+                        <input
+                            type="number"
+                            id="tenure"
+                            min="0"
+                            value="5"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="PhoneService">Phone Service</label>
+                        <select id="PhoneService" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="MultipleLines">Multiple Lines</label>
+                        <select id="MultipleLines" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No phone service">No phone service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="InternetService">Internet Service</label>
+                        <select id="InternetService" required>
+                            <option value="DSL">DSL</option>
+                            <option value="Fiber optic">Fiber optic</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="OnlineSecurity">Online Security</label>
+                        <select id="OnlineSecurity" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="OnlineBackup">Online Backup</label>
+                        <select id="OnlineBackup" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="DeviceProtection">Device Protection</label>
+                        <select id="DeviceProtection" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="TechSupport">Tech Support</label>
+                        <select id="TechSupport" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="StreamingTV">Streaming TV</label>
+                        <select id="StreamingTV" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="StreamingMovies">Streaming Movies</label>
+                        <select id="StreamingMovies" required>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No internet service">No internet service</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Account -->
+            <section class="card">
+
+                <h2>Account & Billing</h2>
+
+                <div class="grid">
+
+                    <div class="field">
+                        <label for="Contract">Contract</label>
+                        <select id="Contract" required>
+                            <option value="Month-to-month">Month-to-month</option>
+                            <option value="One year">One year</option>
+                            <option value="Two year">Two year</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="PaperlessBilling">Paperless Billing</label>
+                        <select id="PaperlessBilling" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="PaymentMethod">Payment Method</label>
+                        <select id="PaymentMethod" required>
+                            <option value="Electronic check">Electronic check</option>
+                            <option value="Mailed check">Mailed check</option>
+                            <option value="Bank transfer (automatic)">
+                                Bank transfer (automatic)
+                            </option>
+                            <option value="Credit card (automatic)">
+                                Credit card (automatic)
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="MonthlyCharges">Monthly Charges</label>
+                        <input
+                            type="number"
+                            id="MonthlyCharges"
+                            min="0"
+                            step="0.01"
+                            value="80"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="TotalCharges">Total Charges</label>
+                        <input
+                            type="number"
+                            id="TotalCharges"
+                            min="0"
+                            step="0.01"
+                            value="400"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <button type="submit" id="predictButton">
+                Predict Churn
+            </button>
+
+        </form>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            Predicting...
+        </div>
+
+
+        <!-- Result -->
+        <section id="result" class="result hidden">
+
+            <h2>Prediction Result</h2>
+
+            <div class="result-box">
+
+                <p class="result-label">Prediction</p>
+                <h3 id="prediction"></h3>
+
+                <p class="result-label">Churn Probability</p>
+                <div class="probability" id="probability"></div>
+
+                <p class="result-label">Risk Level</p>
+                <div id="risk"></div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>
+                Customer Churn Prediction • Machine Learning Project
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
