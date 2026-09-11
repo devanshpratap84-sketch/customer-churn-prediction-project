@@ -1,0 +1,15 @@
+CUSTOMER CHURN PREDICTION - SUBMISSION CHECKLIST
+
+1. Customer_Churn_Project_Report.docx
+2. customer_churn_prediction.py
+3. Customer_Churn_Prediction.ipynb
+4. requirements.txt
+5. README.md
+6. WA_Fn-UseC_-Telco-Customer-Churn.csv (download from the Kaggle dataset if your college requires the raw dataset)
+7. outputs/ folder generated after running the script
+
+Run:
+    pip install -r requirements.txt
+    python customer_churn_prediction.py
+
+Then copy the exact values from outputs/model_comparison.csv into the Results table in the report.
