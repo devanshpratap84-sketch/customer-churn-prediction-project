@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #6b7280;
+    font-size: 17px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 22px;
+    font-size: 23px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-box {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.result-label {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+#prediction {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#probability {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#risk {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
